@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="stock_pickin_template" model="ir.ui.view">
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="model">stock.picking</field>
+            <field name="arch" type="xml">
+            <field name="pack_operation_product_ids" position="before">
+                <group>
+                    <group>
+                        <field name="stock_picking_barcode"/>
+                    </group>
+                </group>
+                <!-- <field name="orden_compra"/> -->
+            </field>
+            </field>
+        </record>
+    </data>
+</odoo>
